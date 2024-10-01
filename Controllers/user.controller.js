@@ -37,8 +37,7 @@ let signup = async (req, res) => {
 
 let login = async (req, res) => {
   let { email, password } = req.body; //{email , password }
-  
-  
+    
   try {
     let existingUser = await User.findOne({ email: email });
  
@@ -69,9 +68,10 @@ let login = async (req, res) => {
 
 let getUser = (req, res) => {
   //console.log(req);
-    if(!req?.user ){
+
+  if (!req?.user) {
       return res.send({result : false , message : 'not authenticated ' })
-    }else{
+    } else {
       return res.send({result : true , message : "user " , data : req.user })
     }
 };
