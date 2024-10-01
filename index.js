@@ -14,7 +14,7 @@ server.use(express.json());
 server.use(cookieParser());
 
 server.use(cors({
-    origin: ""https://unlockjustbuy.netlify.app"",
+    origin: "https://unlockjustbuy.netlify.app",
     credentials: true,
   })
 );
