@@ -68,6 +68,7 @@ let login = async (req, res) => {
 };
 
 let getUser = (req, res) => {
+  console.log(req);
     if(!req?.user ){
       return res.send({result : false , message : 'not authenticated ' })
     }else{
