@@ -21,6 +21,9 @@ server.use(cors({
 
 server.use("/", userRouter);
 server.use("/users", userRouter);
+server.use("/login", userRouter);
+server.use("/logout", userRouter);
+server.use("/signup", userRouter);
 
 dbConnect()
   .then(() => {
