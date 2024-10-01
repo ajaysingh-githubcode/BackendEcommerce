@@ -19,6 +19,7 @@ server.use(cors({
   })
 );
 
+server.use("/", userRouter);
 server.use("/users", userRouter);
 
 dbConnect()
